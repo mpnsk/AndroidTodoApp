@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.paunoski.manuel.todoapp.db.AppDatabase;
+import com.paunoski.manuel.todoapp.db.Todo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
         String s = "Todo #";
         for (int i = 0; i < 3; i++) {
-            list.add(new Todo(s + i));
+            Todo todo = AppDatabase.createTodo(this);
+            todo.text = s + i;
+            list.add(todo);
         }
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recylerViewTodoList);
         adapter = new MyAdapter(list);
@@ -43,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submit(View view) {
-        list.add(new Todo(editText.getText().toString()));
+        Todo todo = AppDatabase.createTodo(this);
+        todo.text = editText.getText().toString();
+        list.add(todo);
         adapter.notifyItemInserted(list.size() - 1);
         editText.setText("");
     }

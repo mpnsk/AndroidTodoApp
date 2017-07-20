@@ -36,4 +36,8 @@ dependencies {
 
     compile 'org.projectlombok:lombok:1.16.18'
     annotationProcessor 'org.projectlombok:lombok:1.16.18'
+    androidTestAnnotationProcessor 'org.projectlombok:lombok:1.16.18'
+
+    compile "android.arch.persistence.room:runtime:1.0.0-alpha4"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0-alpha4"
 }
