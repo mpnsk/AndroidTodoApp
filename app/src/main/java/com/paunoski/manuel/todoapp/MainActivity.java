@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.paunoski.manuel.todoapp.db.Todo;
-import com.paunoski.manuel.todoapp.db.TodoDao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
         String s = "Todo #";
         for (int i = 0; i < 3; i++) {
-            Todo todo = TodoDao.createTodo(this);
+            Todo todo = new Todo();
             todo.text = s + i;
             list.add(todo);
         }
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submit(View view) {
-        Todo todo = TodoDao.createTodo(this);
+        Todo todo = new Todo();
         todo.text = editText.getText().toString();
         list.add(todo);
         adapter.notifyItemInserted(list.size() - 1);

@@ -23,11 +23,10 @@ import static org.hamcrest.Matchers.hasItem;
 public class SimpleEntityReadWriteTest {
     private TodoDao todoDao;
     private AppDatabase mDb;
-    private Context context;
 
     @Before
     public void createDb() {
-        context = InstrumentationRegistry.getTargetContext();
+        Context context = InstrumentationRegistry.getTargetContext();
         AppDatabase.switchToInMemory(context);
         mDb = AppDatabase.getInstance(context);
         todoDao = mDb.todoDao();
@@ -40,9 +39,9 @@ public class SimpleEntityReadWriteTest {
 
     @Test
     public void writeUserAndReadInList() throws Exception {
-        Todo todo = TodoDao.createTodo(context);
+        Todo todo = new Todo();
         todo.text = "my text";
-        todoDao.insertAll(todo, TodoDao.createTodo(context), TodoDao.createTodo(context));
+        todoDao.insertAll(todo, new Todo(), new Todo());
         List<Todo> all = todoDao.getAll();
         assertThat(all, hasItem(todo));
     }
