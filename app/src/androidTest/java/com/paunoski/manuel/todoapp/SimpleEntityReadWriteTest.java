@@ -1,6 +1,5 @@
 package com.paunoski.manuel.todoapp;
 
-import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
@@ -29,7 +28,6 @@ public class SimpleEntityReadWriteTest {
     @Before
     public void createDb() {
         context = InstrumentationRegistry.getTargetContext();
-        mDb = Room.inMemoryDatabaseBuilder(context, AppDatabase.class).build();
         AppDatabase.switchToInMemory(context);
         mDb = AppDatabase.getInstance(context);
         todoDao = mDb.todoDao();
@@ -42,9 +40,9 @@ public class SimpleEntityReadWriteTest {
 
     @Test
     public void writeUserAndReadInList() throws Exception {
-        Todo todo = AppDatabase.createTodo(context);
+        Todo todo = TodoDao.createTodo(context);
         todo.text = "my text";
-        todoDao.insertAll(todo, AppDatabase.createTodo(context), AppDatabase.createTodo(context));
+        todoDao.insertAll(todo, TodoDao.createTodo(context), TodoDao.createTodo(context));
         List<Todo> all = todoDao.getAll();
         assertThat(all, hasItem(todo));
     }
