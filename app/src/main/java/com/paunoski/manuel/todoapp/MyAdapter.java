@@ -32,6 +32,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.textView.setText(todo.toString());
     }
 
+    public void setList(List<Todo> list) {
+        this.list = list;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
         return list.size();
@@ -44,7 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         ViewHolder(View itemView) {
             super(itemView);
             if (textView == null) {
-                textView = (TextView) itemView.findViewById(R.id.textViewItem);
+                textView = itemView.findViewById(R.id.textViewItem);
             }
         }
     }

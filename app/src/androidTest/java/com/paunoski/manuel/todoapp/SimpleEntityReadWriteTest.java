@@ -40,9 +40,11 @@ public class SimpleEntityReadWriteTest {
     @Test
     public void writeUserAndReadInList() throws Exception {
         Todo todo = new Todo();
+        todo.id = 1;
         todo.text = "my text";
         todoDao.insertAll(todo, new Todo(), new Todo());
-        List<Todo> all = todoDao.getAll();
-        assertThat(all, hasItem(todo));
+        List<Todo> list = LiveDataTestUtil.getValue(todoDao.getAll());
+        assertThat(list, hasItem(todo));
     }
+
 }

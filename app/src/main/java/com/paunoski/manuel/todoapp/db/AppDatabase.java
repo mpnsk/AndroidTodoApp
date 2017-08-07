@@ -8,7 +8,7 @@ import android.content.Context;
 import android.support.annotation.VisibleForTesting;
 
 
-@Database(entities = {Todo.class}, version = 1)
+@Database(entities = {Todo.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase instance;
 

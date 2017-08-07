@@ -1,7 +1,8 @@
 package com.paunoski.manuel.todoapp;
 
+import android.arch.lifecycle.LifecycleActivity;
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
@@ -16,11 +17,12 @@ import com.paunoski.manuel.todoapp.db.Todo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends LifecycleActivity {
 
     private EditText editText;
     private MyAdapter adapter;
     private List<Todo> list;
+    private TodoViewModel todoViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +35,16 @@ public class MainActivity extends AppCompatActivity {
             todo.text = s + i;
             list.add(todo);
         }
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recylerViewTodoList);
+        RecyclerView recyclerView = findViewById(R.id.recylerViewTodoList);
         adapter = new MyAdapter(list);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        Button button = (Button) findViewById(R.id.buttonSubmit);
-        editText = (EditText) findViewById(R.id.editTextInput);
+        todoViewModel = ViewModelProviders.of(this).get(TodoViewModel.class);
+        todoViewModel.getObservableTodos().observe(this, todos -> adapter.setList(todos));
+
+        Button button = findViewById(R.id.buttonSubmit);
+        editText = findViewById(R.id.editTextInput);
         editText.setOnEditorActionListener((TextView v, int actionId, KeyEvent event) -> {
             if (actionId == EditorInfo.IME_ACTION_DONE) button.performClick();
             return false;
@@ -49,8 +54,7 @@ public class MainActivity extends AppCompatActivity {
     public void submit(View view) {
         Todo todo = new Todo();
         todo.text = editText.getText().toString();
-        list.add(todo);
-        adapter.notifyItemInserted(list.size() - 1);
+        todoViewModel.insertTodo(todo);
         editText.setText("");
     }
 }
