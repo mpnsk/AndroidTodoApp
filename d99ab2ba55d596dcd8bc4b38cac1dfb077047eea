@@ -1,0 +1,16 @@
+[ver:1,total:6959]
+app/build.gradle:1646,1500724800:68,1501948800:362,1501952400:663,1502096400:320,1502100000:233,m
+app/src/main/java/com/paunoski/manuel/todoapp/MainActivity.java:1643,1500724800:1173,1501131600:84,1501135200:185,1501948800:171,1502100000:30,m
+app/src/main/java/com/paunoski/manuel/todoapp/db/AppDatabase.java:999,1500724800:206,1501131600:36,1501135200:200,1501948800:366,1501952400:180,1502100000:11,m
+app/src/androidTest/java/com/paunoski/manuel/todoapp/SimpleEntityReadWriteTest.java:838,1500724800:60,1501948800:240,1501952400:458,1502100000:80,m
+app/src/main/java/com/paunoski/manuel/todoapp/TodoViewModel.java:547,1500724800:224,1501131600:96,1501135200:185,1502100000:42,m
+app/src/main/java/com/paunoski/manuel/todoapp/db/Todo.java:237,1500724800:45,1501135200:80,1501948800:12,1501952400:62,1502096400:20,1502100000:18,m
+app/src/androidTest/java/com/paunoski/manuel/todoapp/LiveDataTestUtil.java:213,1501952400:90,1502096400:20,1502100000:103,m
+app/src/main/java/com/paunoski/manuel/todoapp/MyAdapter.java:206,1500724800:52,1501131600:12,1501135200:20,1501948800:30,1502100000:92,m
+.gtm/terminal.app:180,1500721200:180,r
+app/src/main/AndroidManifest.xml:174,1501952400:147,1502100000:27,r
+app/src/main/java/com/paunoski/manuel/todoapp/db/TodoDao.java:86,1500724800:32,1501131600:12,1501948800:9,1501952400:20,1502100000:13,m
+gradle/wrapper/gradle-wrapper.properties:80,1500724800:20,1501131600:60,r
+app/build/generated/source/apt/debug/com/paunoski/manuel/todoapp/db/TodoDao_Impl.java:50,1501135200:50,r
+settings.gradle:30,1500724800:30,r
+build.gradle:30,1500724800:30,r
