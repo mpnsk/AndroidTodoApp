@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.paunoski.manuel.todoapp.db.Todo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +29,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Todo todo = list.get(position);
-        holder.textView.setText(todo.getName());
+        holder.textView.setText(todo.toString());
+    }
+
+    public void setList(List<Todo> list) {
+        this.list = list;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -42,7 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         ViewHolder(View itemView) {
             super(itemView);
             if (textView == null) {
-                textView = (TextView) itemView.findViewById(R.id.textViewItem);
+                textView = itemView.findViewById(R.id.textViewItem);
             }
         }
     }
