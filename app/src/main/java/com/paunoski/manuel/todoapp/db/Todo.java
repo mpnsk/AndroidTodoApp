@@ -15,5 +15,6 @@ public class Todo {
     @PrimaryKey(autoGenerate = true)
     public int id;
     public String text;
+    public boolean done;
 
 }

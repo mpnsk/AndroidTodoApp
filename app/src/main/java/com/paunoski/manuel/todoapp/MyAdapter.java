@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.paunoski.manuel.todoapp.db.Todo;
@@ -45,11 +46,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
+        CheckBox checkBox;
 
         ViewHolder(View itemView) {
             super(itemView);
             if (textView == null) {
                 textView = itemView.findViewById(R.id.textViewItem);
+            }
+            if(checkBox == null){
+                checkBox = itemView.findViewById(R.id.checkBoxDone);
             }
         }
     }

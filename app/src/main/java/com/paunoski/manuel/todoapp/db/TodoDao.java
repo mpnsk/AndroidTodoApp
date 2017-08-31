@@ -16,6 +16,4 @@ public abstract class TodoDao {
     @Insert
     public abstract void insertAll(Todo... todos);
 
-    @Query("SELECT MAX(id) FROM todo")
-    public abstract int getId();
 }
