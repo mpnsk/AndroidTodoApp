@@ -22,8 +22,9 @@ public abstract class AppDatabase extends RoomDatabase {
     }
 
     @VisibleForTesting
-    public static void switchToInMemory(Context context) {
+    public static AppDatabase switchToInMemory(Context context) {
         instance = Room.inMemoryDatabaseBuilder(context, AppDatabase.class).build();
+        return instance;
     }
 
     public abstract TodoDao todoDao();
