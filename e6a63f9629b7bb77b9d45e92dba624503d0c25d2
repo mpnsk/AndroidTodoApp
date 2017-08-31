@@ -1,0 +1,16 @@
+[ver:1,total:4140]
+app/src/main/java/com/paunoski/manuel/todoapp/MyAdapter.java:1000,1502276400:592,1502280000:180,1502359200:160,1504166400:68,m
+.gtm/terminal.app:715,1502100000:360,1502211600:180,1502276400:65,1504166400:110,r
+app/src/androidTest/java/com/paunoski/manuel/todoapp/MainActivityCheckboxTest.java:596,1502276400:441,1504166400:155,r
+app/src/main/res/layout/list_todo.xml:484,1502276400:434,1502280000:30,1504166400:20,m
+app/src/main/java/com/paunoski/manuel/todoapp/db/AppDatabase.java:294,1502276400:288,1504166400:6,m
+app/build.gradle:213,1502100000:30,1502276400:75,1504166400:108,m
+.gtm/1502277244.event:200,1504166400:200,d
+app/src/main/java/com/paunoski/manuel/todoapp/db/Todo.java:149,1502276400:39,1502280000:30,1504166400:80,m
+app/src/main/java/com/paunoski/manuel/todoapp/MainActivity.java:120,1502100000:90,1502276400:30,r
+app/src/main/java/com/paunoski/manuel/todoapp/db/TodoDao.java:114,1502276400:62,1504166400:52,m
+.idea/markdown-navigator/profiles_settings.xml:92,1504166400:92,r
+build.gradle:65,1502276400:30,1504166400:35,m
+app/src/androidTest/java/com/paunoski/manuel/todoapp/MainActivityCheckbox2Test.java:46,1502276400:20,1502359200:20,1504166400:6,r
+gradle/wrapper/gradle-wrapper.properties:28,1504166400:28,m
+app/src/androidTest/java/com/paunoski/manuel/todoapp/SimpleEntityReadWriteTest.java:24,1502276400:24,r
