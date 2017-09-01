@@ -1,10 +1,10 @@
 package com.paunoski.manuel.todoapp;
 
-import android.arch.lifecycle.LifecycleActivity;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -17,7 +17,7 @@ import com.paunoski.manuel.todoapp.db.Todo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends LifecycleActivity {
+public class MainActivity extends AppCompatLifecycleActivity {
 
     private EditText editText;
     private MyAdapter adapter;
@@ -28,6 +28,9 @@ public class MainActivity extends LifecycleActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
         list = new ArrayList<>();
         String s = "Todo #";
         for (int i = 0; i < 3; i++) {
