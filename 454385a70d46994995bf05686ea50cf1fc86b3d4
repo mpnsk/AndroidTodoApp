@@ -1,0 +1,12 @@
+[ver:1,total:3298]
+app/build.gradle:693,1504260000:60,1504263600:204,1504267200:429,m
+app/src/main/java/com/paunoski/manuel/todoapp/MainActivity.java:678,1504260000:135,1504263600:33,1504267200:470,1504270800:40,m
+app/src/main/res/layout/activity_main.xml:437,1504267200:367,1504270800:70,m
+app/src/main/java/com/paunoski/manuel/todoapp/AppCompatLifecycleActivity.java:419,1504267200:259,1504270800:160,m
+app/src/main/res/values/styles.xml:366,1504263600:117,1504267200:249,m
+app/src/main/res/values-v21/styles.xml:275,1504267200:275,m
+.gtm/terminal.app:266,1504260000:60,1504267200:206,r
+app/src/main/java/com/paunoski/manuel/todoapp/db/AppDatabase.java:63,1504263600:63,r
+app/src/main/java/com/paunoski/manuel/todoapp/TodoViewModel.java:49,1504260000:30,1504263600:19,r
+app/src/main/AndroidManifest.xml:32,1504267200:22,1504270800:10,r
+app/src/main/res/layout-v21/activity_main.xml:20,1504270800:20,d
