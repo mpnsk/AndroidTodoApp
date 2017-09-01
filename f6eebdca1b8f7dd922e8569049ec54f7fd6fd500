@@ -1,0 +1,7 @@
+[ver:1,total:1920]
+.gtm/terminal.app:887,1504195200:75,1504260000:812,r
+app/src/main/java/com/paunoski/manuel/todoapp/MainActivity.java:571,1504195200:330,1504256400:165,1504260000:76,r
+Readme.md:180,1504260000:180,m
+build.gradle:177,1504256400:15,1504260000:162,r
+app/build.gradle:90,1504260000:90,r
+app/src/main/res/layout/list_todo.xml:15,1504195200:15,r
