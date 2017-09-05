@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatLifecycleActivity {
 
     private EditText editText;
     private MyAdapter adapter;
-    private List<Todo> list;
     private TodoViewModel todoViewModel;
 
     @Override
@@ -31,15 +30,9 @@ public class MainActivity extends AppCompatLifecycleActivity {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        list = new ArrayList<>();
-        String s = "Todo #";
-        for (int i = 0; i < 3; i++) {
-            Todo todo = new Todo();
-            todo.text = s + i;
-            list.add(todo);
-        }
+        List<Todo> list = new ArrayList<>();
         RecyclerView recyclerView = findViewById(R.id.recylerViewTodoList);
-        adapter = new MyAdapter(list);
+        adapter = new MyAdapter(list, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

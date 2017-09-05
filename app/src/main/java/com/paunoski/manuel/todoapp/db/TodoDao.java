@@ -19,4 +19,7 @@ public abstract class TodoDao {
 
     @Query("DELETE FROM todo")
     public abstract void nukeTable();
+
+    @Delete
+    public abstract void delete(Todo todo);
 }

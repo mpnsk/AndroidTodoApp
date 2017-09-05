@@ -24,12 +24,12 @@ public class TodoViewModel extends AndroidViewModel {
         observableTodos = todoDao.getAll();
     }
 
-    public LiveData<List<Todo>> getObservableTodos() {
+    LiveData<List<Todo>> getObservableTodos() {
         return observableTodos;
     }
 
     @SuppressLint("StaticFieldLeak")
-    public void insertTodo(Todo todo) {
+    void insertTodo(Todo todo) {
         new AsyncTask<Todo, Void, Void>() {
             @Override
             protected Void doInBackground(Todo... todos) {
@@ -37,5 +37,23 @@ public class TodoViewModel extends AndroidViewModel {
                 return null;
             }
         }.execute(todo);
+    }
+
+    void removeTodo(Todo todo) {
+        new DeleteAsyncTask(todoDao).execute(todo);
+    }
+
+    private static class DeleteAsyncTask extends AsyncTask<Todo, Void, Void> {
+        private final TodoDao todoDao;
+
+        private DeleteAsyncTask(TodoDao todoDao) {
+            this.todoDao = todoDao;
+        }
+
+        @Override
+        protected Void doInBackground(final Todo... todos) {
+            todoDao.delete(todos[0]);
+            return null;
+        }
     }
 }
