@@ -1,0 +1,12 @@
+[ver:1,total:2040]
+app/src/androidTest/java/com/paunoski/manuel/todoapp/MainActivityTest.java:825,1504634400:825,m
+.gtm/terminal.app:290,1504623600:40,1504634400:250,r
+app/src/test/java/com/paunoski/manuel/todoapp/ExampleUnitTest.java:260,1504634400:260,r
+app/src/androidTest/java/com/paunoski/manuel/todoapp/SimpleEntityReadWriteTest.java:200,1504623600:180,1504634400:20,r
+app/src/main/java/com/paunoski/manuel/todoapp/db/TodoDao.java:180,1504634400:180,r
+app/src/main/java/com/paunoski/manuel/todoapp/MyAdapter.java:80,1504623600:80,r
+app/src/androidTest/java/com/paunoski/manuel/todoapp/instruTests/SimpleEntityReadWriteTest.java:60,1504634400:60,d
+app/src/androidTest/java/com/paunoski/manuel/todoapp/MainActivityCheckboxTest.java:60,1504634400:60,d
+app/src/main/java/com/paunoski/manuel/todoapp/db/AppDatabase.java:45,1504634400:45,r
+app/src/main/java/com/paunoski/manuel/todoapp/db/Todo.java:30,1504634400:30,r
+app/src/androidTest/java/com/paunoski/manuel/todoapp/LiveDataTestUtil.java:10,1504634400:10,r
