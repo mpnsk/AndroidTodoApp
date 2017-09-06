@@ -1,6 +1,8 @@
 package com.paunoski.manuel.todoapp;
 
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,7 +16,6 @@ import com.paunoski.manuel.todoapp.db.Todo;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
@@ -35,7 +36,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Todo todo = list.get(position);
+
         holder.textView.setText(todo.toString());
+        Context context = ((ViewGroup) holder.textView.getParent()).getContext();
+        Intent intent = new Intent(context, EditActivity.class);
+        intent.putExtra("todo", todo);
+        holder.textView.setOnClickListener(view -> context.startActivity(intent));
+
         holder.imageView.setOnClickListener(view -> todoViewModel.removeTodo(list.get(position)));
     }
 
