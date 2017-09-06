@@ -1,0 +1,13 @@
+[ver:1,total:4140]
+app/src/main/java/com/paunoski/manuel/todoapp/EditActivity.java:1485,1504692000:60,1504695600:1425,m
+app/src/main/java/com/paunoski/manuel/todoapp/MyAdapter.java:951,1504692000:725,1504695600:226,m
+app/src/main/res/layout/activity_edit.xml:628,1504692000:15,1504695600:613,m
+.gtm/terminal.app:420,1504634400:180,1504638000:120,1504692000:120,r
+app/src/main/java/com/paunoski/manuel/todoapp/MainActivity.java:192,1504692000:100,1504695600:92,r
+app/src/test/java/com/paunoski/manuel/todoapp/ExampleUnitTest.java:180,1504634400:180,r
+app/src/main/java/com/paunoski/manuel/todoapp/db/TodoDao.java:123,1504695600:123,m
+app/src/main/java/com/paunoski/manuel/todoapp/TodoViewModel.java:73,1504695600:73,r
+app/src/main/java/com/paunoski/manuel/todoapp/db/Todo.java:55,1504695600:55,m
+app/build/generated/source/apt/debug/com/paunoski/manuel/todoapp/db/TodoDao_Impl.java:15,1504695600:15,r
+app/src/main/AndroidManifest.xml:12,1504695600:12,m
+app/build/generated/source/apt/debug/com/paunoski/manuel/todoapp/db/AppDatabase_Impl.java:6,1504695600:6,r
